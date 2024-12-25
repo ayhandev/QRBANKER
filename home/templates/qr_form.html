@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRBanker - Генерация QR-кодов для перевода через Сбербанк</title>
+</head>
+<body>
+<header>
+    QRBanker
+</header>
+
+<main>
+    <div class="container">
+        <h1>Генерация QR-кода для перевода через Сбербанк</h1>
+
+        {% if error_message %}
+            <div class="error-message">{{ error_message }}</div>
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Сгенерировать QR-код</button>
+        </form>
+
+        {% if qr_code_base64 %}
+            <div class="qr-container">
+                <h2>Ваш QR-код</h2>
+                <img src="data:image/png;base64,{{ qr_code_base64 }}" alt="QR-код">
+            </div>
+        {% endif %}
+    </div>
+</main>
+
+</body>
+</html>
