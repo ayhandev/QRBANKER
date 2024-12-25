@@ -1,0 +1,198 @@
+yle>
+        /* Основные стили */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+            color: #333;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        header {
+            background-color: #0066cc;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: headerAnimation 1s ease-in-out;
+        }
+
+        @keyframes headerAnimation {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.03);
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 25px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        input[type="text"], input[type="number"], button {
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 18px;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #f7f9fc;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus {
+            background-color: #e0f4ff;
+            outline: none;
+            transform: scale(1.02);
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s, transform 0.2s;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        .qr-container {
+            margin-top: 40px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .qr-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 16px;
+            animation: fadeIn 1s ease-out forwards;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #28a745;
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        /* Плавная анимация */
+        body {
+            background-color: #f4f7fc;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        /* Адаптивные стили */
+        @media (max-width: 768px) {
+            header {
+                font-size: 28px;
+                padding: 50px 20px;
+            }
+
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            input[type="text"], input[type="number"], button {
+                font-size: 16px;
+                padding: 12px;
+            }
+
+            button {
+                font-size: 18px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 24px;
+                padding: 40px 10px;
+            }
+
+            .container {
+                padding: 15px;
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            input[type="text"], input[type="number"], button {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 12px;
+            }
+        }
